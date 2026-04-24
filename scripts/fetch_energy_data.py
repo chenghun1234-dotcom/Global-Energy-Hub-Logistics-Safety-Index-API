@@ -7,7 +7,7 @@ from datetime import datetime
 EIA_API_KEY = os.getenv('EIA_API_KEY')
 OPINET_API_KEY = os.getenv('OPINET_API_KEY')
 
-DATA_FILE = os.path.join(os.path.dirname(__file__), '..', 'data', 'prices.json')
+DATA_FILE = os.path.join(os.path.dirname(__file__), '..', 'api', 'data', 'prices.json')
 
 def fetch_eia_data():
     """

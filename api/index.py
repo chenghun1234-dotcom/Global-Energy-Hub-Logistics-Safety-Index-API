@@ -70,6 +70,4 @@ async def get_market_prices():
 async def health_check():
     return {"status": "operational", "engine": "Deterministic Logic Layer v1"}
 
-# Serve static files for documentation/landing page
-if os.path.exists("../static"):
-    app.mount("/", StaticFiles(directory="../static", html=True), name="static")
+# Static files are now served from the /public directory by Vercel directly
