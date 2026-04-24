@@ -1,0 +1,165 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Global Energy Hub & Logistics Safety-Index API",
+    "description": "High-performance, deterministic API for energy logistics, maritime route safety scores, and global energy taxation logic. Built for critical supply chain analysis.",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Global Energy Nexus Support"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://global-energy-hub-logistics-safety-index-a493no0q1.vercel.app",
+      "description": "Production Server (Vercel)"
+    }
+  ],
+  "paths": {
+    "/api/route-safety-score": {
+      "get": {
+        "summary": "Get Maritime Route Safety Score",
+        "description": "Calculates safety metrics for a specific maritime route using conflict indices, piracy threat levels, and chokepoint analysis.",
+        "parameters": [
+          {
+            "name": "route_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ID of the route (e.g., HOR-MAL for Hormuz to Malacca)",
+            "example": "HOR-MAL"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "example": {
+                  "route_name": "Strait of Hormuz to Malacca Strait",
+                  "safety_score": 17.0,
+                  "risk_category": "High",
+                  "parameters": {
+                    "conflict_index": 8,
+                    "piracy_level": 3,
+                    "chokepoints": 2
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Route not found"
+          }
+        }
+      }
+    },
+    "/api/energy-tax-logic": {
+      "get": {
+        "summary": "Calculate Energy Taxation & Fees",
+        "description": "Provides deterministic calculations for VAT, import tariffs, and storage fees for energy products by country.",
+        "parameters": [
+          {
+            "name": "country",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "ISO Country Code (e.g., KR)",
+            "example": "KR"
+          },
+          {
+            "name": "quantity",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "number"
+            },
+            "description": "Quantity in cubic meters (m3)",
+            "example": 10000
+          },
+          {
+            "name": "months",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 0
+            },
+            "description": "Months of storage",
+            "example": 3
+          },
+          {
+            "name": "value",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "default": 800
+            },
+            "description": "Base value per m3 in USD",
+            "example": 800
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "example": {
+                  "country": "South Korea",
+                  "currency": "USD",
+                  "total_estimated_cost": 9352600.0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/port-infrastructure-specs": {
+      "get": {
+        "summary": "Get Port Infrastructure Specs",
+        "description": "Technical specifications for major energy ports including draughts and vessel class compatibility.",
+        "parameters": [
+          {
+            "name": "port",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Port name or ID (e.g., ULSAN, SIN)",
+            "example": "ULSAN"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/api/market-prices": {
+      "get": {
+        "summary": "Latest Energy Market Prices",
+        "description": "Retrieves daily updated energy price benchmarks (Brent, WTI, etc.) synced from EIA/Opinet.",
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    },
+    "/api/health": {
+      "get": {
+        "summary": "API Health Check",
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        }
+      }
+    }
+  }
+}
