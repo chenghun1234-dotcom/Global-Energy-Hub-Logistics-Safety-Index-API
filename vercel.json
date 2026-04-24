@@ -1,9 +1,9 @@
 {
-  "devCommand": "uvicorn main:app --host 0.0.0.0 --port 3000",
+  "devCommand": "uvicorn api.index:app --host 0.0.0.0 --port 3000",
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/main.py"
+      "destination": "/api/index.py"
     },
     {
       "source": "/(.*)",
@@ -11,7 +11,7 @@
     }
   ],
   "functions": {
-    "main.py": {
+    "api/index.py": {
       "runtime": "vercel-python@0.10.3"
     }
   }

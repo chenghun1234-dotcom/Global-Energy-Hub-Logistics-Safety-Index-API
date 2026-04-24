@@ -71,5 +71,5 @@ async def health_check():
     return {"status": "operational", "engine": "Deterministic Logic Layer v1"}
 
 # Serve static files for documentation/landing page
-if os.path.exists("static"):
-    app.mount("/", StaticFiles(directory="static", html=True), name="static")
+if os.path.exists("../static"):
+    app.mount("/", StaticFiles(directory="../static", html=True), name="static")
