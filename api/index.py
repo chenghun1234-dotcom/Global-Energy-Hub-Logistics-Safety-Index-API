@@ -78,4 +78,12 @@ async def read_root():
     """
     return FileResponse("index.html")
 
+@app.get("/style.css", include_in_schema=False)
+async def get_style():
+    return FileResponse("style.css")
+
+@app.get("/hero.png", include_in_schema=False)
+async def get_hero():
+    return FileResponse("hero.png")
+
 # Static files are handled by Vercel rewrites or served from the root

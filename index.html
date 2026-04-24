@@ -3,59 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Energy Hub & Logistics Safety-Index API</title>
-    <meta name="description" content="Deterministic API for global energy logistics, maritime route safety, and energy tax calculations. Built with zero-cost serverless architecture.">
+    <title>Global Energy Nexus | Premium Logistics API</title>
+    <meta name="description" content="High-performance deterministic API for energy logistics, maritime safety scores, and global taxation indices.">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Fira+Code&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="hero">
-        <span class="badge">DETERMINISTIC DATA ENGINE</span>
-        <h1>Energy Logistics Nexus</h1>
-        <p>A high-performance API providing verifiable maritime safety scores, energy taxation logic, and port infrastructure data—built for the next generation of energy logistics platforms.</p>
+        <span class="badge">V1.0.0 RELEASE • DETERMINISTIC ENGINE</span>
+        <h1>Energy Logistics<br>Nexus API</h1>
+        <p>A mission-critical data layer providing verifiable maritime safety scores, precise energy taxation logic, and global infrastructure specifications—built for the next generation of energy logistics platforms.</p>
     </header>
 
     <div class="container">
         <div class="glass-card">
             <h3>Maritime Safety</h3>
-            <p>Calculates route-specific risk using conflict indices, piracy data, and chokepoint analysis.</p>
+            <p>Calculate route-specific risk using sophisticated conflict zone indices, piracy tracking, and maritime chokepoint analysis.</p>
         </div>
         <div class="glass-card">
             <h3>Tax & Logistics</h3>
-            <p>Accurate deterministic calculation of VAT, tariffs, and storage fees across major global energy hubs.</p>
+            <p>Execute precise deterministic calculations for VAT, import tariffs, and storage fees across major global energy trading hubs.</p>
         </div>
         <div class="glass-card">
-            <h3>Infrastructure</h3>
-            <p>Real-time data on port draughts, terminal capacities, and VLCC/ULCC compatibility.</p>
+            <h3>Port Specs</h3>
+            <p>Access real-time specifications for terminal capacities, draught restrictions, and vessel compatibility for VLCC/ULCC classes.</p>
         </div>
     </div>
 
     <main class="api-section">
-        <h2>API Reference</h2>
+        <h2>Developer Reference</h2>
         <div class="endpoint-list">
-            <div class="endpoint-item">
-                <span class="method">GET</span><span class="path">/api/route-safety-score</span>
-                <p class="description">Get safety metrics for a specific maritime route. <code>?route_id=HOR-MAL</code></p>
+            <!-- Route Safety Score -->
+            <div class="endpoint-card">
+                <div class="endpoint-header">
+                    <span class="method">GET</span>
+                    <span class="path">/api/route-safety-score</span>
+                    <button class="copy-btn" onclick="copyToClipboard('/api/route-safety-score?route_id=HOR-MAL')">Copy Endpoint</button>
+                </div>
+                <p>Retrieves safety metrics for a specific maritime route. Use <code>route_id=HOR-MAL</code> for the Strait of Hormuz to Malacca route.</p>
             </div>
-            <div class="endpoint-item">
-                <span class="method">GET</span><span class="path">/api/energy-tax-logic</span>
-                <p class="description">Calculate taxes and storage fees. <code>?country=KR&quantity=10000&months=3</code></p>
+
+            <!-- Energy Tax Logic -->
+            <div class="endpoint-card">
+                <div class="endpoint-header">
+                    <span class="method">GET</span>
+                    <span class="path">/api/energy-tax-logic</span>
+                    <button class="copy-btn" onclick="copyToClipboard('/api/energy-tax-logic?country=KR&quantity=10000&months=3')">Copy Endpoint</button>
+                </div>
+                <p>Calculates comprehensive taxes and storage fees. Parameters: <code>country</code>, <code>quantity</code> (m3), <code>months</code>, <code>value</code> (USD).</p>
             </div>
-            <div class="endpoint-item">
-                <span class="method">GET</span><span class="path">/api/port-infrastructure-specs</span>
-                <p class="description">Fetch technical specs for major energy ports. <code>?port=ULSAN</code></p>
+
+            <!-- Port Specs -->
+            <div class="endpoint-card">
+                <div class="endpoint-header">
+                    <span class="method">GET</span>
+                    <span class="path">/api/port-infrastructure-specs</span>
+                    <button class="copy-btn" onclick="copyToClipboard('/api/port-infrastructure-specs?port=ULSAN')">Copy Endpoint</button>
+                </div>
+                <p>Fetches technical infrastructure data for major ports. <code>?port=ULSAN</code> or <code>?port=FUJAIRAH</code>.</p>
             </div>
-            <div class="endpoint-item">
-                <span class="method">GET</span><span class="path">/api/market-prices</span>
-                <p class="description">Retrieve the latest synced energy price benchmarks (EIA/Opinet).</p>
+
+            <!-- Market Prices -->
+            <div class="endpoint-card">
+                <div class="endpoint-header">
+                    <span class="method">GET</span>
+                    <span class="path">/api/market-prices</span>
+                    <button class="copy-btn" onclick="copyToClipboard('/api/market-prices')">Copy Endpoint</button>
+                </div>
+                <p>Returns the latest daily energy price benchmarks (Brent, WTI, Gasoline, Diesel) synced from EIA and Opinet.</p>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Global Energy Hub & Logistics Safety-Index | Powered by Vercel Edge Functions</p>
+        <p>&copy; 2026 Global Energy Hub & Logistics Safety-Index | Built with High-Performance Serverless Architecture</p>
     </footer>
+
+    <script>
+        function copyToClipboard(text) {
+            const fullUrl = window.location.origin + text;
+            navigator.clipboard.writeText(fullUrl).then(() => {
+                const btn = event.target;
+                const originalText = btn.innerText;
+                btn.innerText = "Copied!";
+                btn.style.background = "#00d2ff";
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.background = "none";
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>
