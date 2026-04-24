@@ -1,0 +1,54 @@
+{
+  "KR": {
+    "country_name": "South Korea",
+    "vat": 0.10,
+    "import_tariff_oil": 0.03,
+    "education_tax": 0.15,
+    "storage_fee_per_month_m3": 5.50,
+    "exemptions": [
+      {
+        "type": "Bonded Area",
+        "description": "0% VAT for re-export oil and blending products."
+      }
+    ]
+  },
+  "SG": {
+    "country_name": "Singapore",
+    "vat": 0.09,
+    "import_tariff_oil": 0.00,
+    "education_tax": 0.00,
+    "storage_fee_per_month_m3": 7.20,
+    "exemptions": [
+      {
+        "type": "Global Trader Programme",
+        "description": "Reduced corporate tax for qualified energy companies."
+      }
+    ]
+  },
+  "NL": {
+    "country_name": "Netherlands",
+    "vat": 0.21,
+    "import_tariff_oil": 0.00,
+    "education_tax": 0.00,
+    "storage_fee_per_month_m3": 6.80,
+    "exemptions": [
+      {
+        "type": "Entrepôt status",
+        "description": "Suspension of VAT and excise duties for goods in transit."
+      }
+    ]
+  },
+  "AE": {
+    "country_name": "UAE",
+    "vat": 0.05,
+    "import_tariff_oil": 0.00,
+    "education_tax": 0.00,
+    "storage_fee_per_month_m3": 4.50,
+    "exemptions": [
+      {
+        "type": "Free Zone",
+        "description": "100% tax exemption within designated energy zones."
+      }
+    ]
+  }
+}

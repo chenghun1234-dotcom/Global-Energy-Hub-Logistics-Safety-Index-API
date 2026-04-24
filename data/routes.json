@@ -1,0 +1,38 @@
+[
+  {
+    "route_id": "HOR-MAL",
+    "name": "Strait of Hormuz to Malacca Strait",
+    "chokepoints": 2,
+    "piracy_threat_level": 3,
+    "conflict_zone_index": 8,
+    "base_distance_nm": 3400,
+    "description": "High risk due to geopolitical tensions in Persian Gulf."
+  },
+  {
+    "route_id": "SUZ-GIB",
+    "name": "Suez Canal to Strait of Gibraltar",
+    "chokepoints": 2,
+    "piracy_threat_level": 1,
+    "conflict_zone_index": 5,
+    "base_distance_nm": 1900,
+    "description": "Critical link for Europe-Asia trade."
+  },
+  {
+    "route_id": "PAN-TEX",
+    "name": "Panama Canal to Texas Coast",
+    "chokepoints": 1,
+    "piracy_threat_level": 1,
+    "conflict_zone_index": 1,
+    "base_distance_nm": 1500,
+    "description": "Low physical threat, but weather dependent."
+  },
+  {
+    "route_id": "BAB-SUZ",
+    "name": "Bab el-Mandeb to Suez",
+    "chokepoints": 2,
+    "piracy_threat_level": 8,
+    "conflict_zone_index": 9,
+    "base_distance_nm": 1200,
+    "description": "Extreme risk due to active conflict and piracy."
+  }
+]

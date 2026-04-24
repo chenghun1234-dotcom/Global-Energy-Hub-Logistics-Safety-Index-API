@@ -1,0 +1,18 @@
+{
+  "devCommand": "uvicorn main:app --host 0.0.0.0 --port 3000",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/main.py"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/static/index.html"
+    }
+  ],
+  "functions": {
+    "main.py": {
+      "runtime": "vercel-python@0.10.3"
+    }
+  }
+}

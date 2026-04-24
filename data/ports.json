@@ -1,0 +1,52 @@
+[
+  {
+    "id": "KR-USN",
+    "name": "Ulsan",
+    "country": "South Korea",
+    "terminal_capacity": "23,000,000 m3",
+    "draught": "17.0m",
+    "max_vessel": "VLCC",
+    "specialization": "Crude Oil, Petroleum Products",
+    "notes": "Main energy hub in Northeast Asia."
+  },
+  {
+    "id": "KR-YS",
+    "name": "Yeosu",
+    "country": "South Korea",
+    "terminal_capacity": "15,600,000 m3",
+    "draught": "16.5m",
+    "max_vessel": "VLCC",
+    "specialization": "Naphtha, Chemical Products",
+    "notes": "Strategic location for petrochemical industry."
+  },
+  {
+    "id": "SG-SIN",
+    "name": "Singapore",
+    "country": "Singapore",
+    "terminal_capacity": "55,000,000 m3",
+    "draught": "18.5m",
+    "max_vessel": "ULCC",
+    "specialization": "Global Bunkering, Refining Hub",
+    "notes": "World's largest bunkering port."
+  },
+  {
+    "id": "NL-RTM",
+    "name": "Rotterdam",
+    "country": "Netherlands",
+    "terminal_capacity": "40,000,000 m3",
+    "draught": "24.0m",
+    "max_vessel": "ULCC",
+    "specialization": "Gate to Europe, Biofuels",
+    "notes": "Deepest port in Europe."
+  },
+  {
+    "id": "AE-FUJ",
+    "name": "Fujairah",
+    "country": "UAE",
+    "terminal_capacity": "10,000,000 m3",
+    "draught": "18.0m",
+    "max_vessel": "VLCC",
+    "specialization": "Crude Export, Bunkering",
+    "notes": "Strategic location outside the Strait of Hormuz."
+  }
+]

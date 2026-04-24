@@ -1,0 +1,36 @@
+name: Energy Data Sync
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Every day at midnight UTC
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+
+      - name: Run sync script
+        env:
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+          OPINET_API_KEY: ${{ secrets.OPINET_API_KEY }}
+        run: python scripts/fetch_energy_data.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'EnergyBot'
+          git config --global user.email 'bot@energyhub.api'
+          git add data/prices.json
+          git commit -m "chore: nightly energy data sync [skip ci]" || echo "No changes to commit"
+          git push

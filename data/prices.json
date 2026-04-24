@@ -1,0 +1,17 @@
+{
+  "updated_at": "2026-04-24T07:03:26.280632Z",
+  "crude_oil": {
+    "brent": 103.4,
+    "wti": 78.4,
+    "dubai": 81.2
+  },
+  "refined_products": {
+    "gasoline": 2.45,
+    "diesel": 2.1,
+    "kerosene": 2.3
+  },
+  "korea_average": {
+    "gasoline": 2006.47,
+    "diesel": 2000.54
+  }
+}

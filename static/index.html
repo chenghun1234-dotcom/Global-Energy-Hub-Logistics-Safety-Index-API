@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Energy Hub & Logistics Safety-Index API</title>
+    <meta name="description" content="Deterministic API for global energy logistics, maritime route safety, and energy tax calculations. Built with zero-cost serverless architecture.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <span class="badge">DETERMINISTIC DATA ENGINE</span>
+        <h1>Energy Logistics Nexus</h1>
+        <p>A high-performance API providing verifiable maritime safety scores, energy taxation logic, and port infrastructure data—built for the next generation of energy logistics platforms.</p>
+    </header>
+
+    <div class="container">
+        <div class="glass-card">
+            <h3>Maritime Safety</h3>
+            <p>Calculates route-specific risk using conflict indices, piracy data, and chokepoint analysis.</p>
+        </div>
+        <div class="glass-card">
+            <h3>Tax & Logistics</h3>
+            <p>Accurate deterministic calculation of VAT, tariffs, and storage fees across major global energy hubs.</p>
+        </div>
+        <div class="glass-card">
+            <h3>Infrastructure</h3>
+            <p>Real-time data on port draughts, terminal capacities, and VLCC/ULCC compatibility.</p>
+        </div>
+    </div>
+
+    <main class="api-section">
+        <h2>API Reference</h2>
+        <div class="endpoint-list">
+            <div class="endpoint-item">
+                <span class="method">GET</span><span class="path">/api/route-safety-score</span>
+                <p class="description">Get safety metrics for a specific maritime route. <code>?route_id=HOR-MAL</code></p>
+            </div>
+            <div class="endpoint-item">
+                <span class="method">GET</span><span class="path">/api/energy-tax-logic</span>
+                <p class="description">Calculate taxes and storage fees. <code>?country=KR&quantity=10000&months=3</code></p>
+            </div>
+            <div class="endpoint-item">
+                <span class="method">GET</span><span class="path">/api/port-infrastructure-specs</span>
+                <p class="description">Fetch technical specs for major energy ports. <code>?port=ULSAN</code></p>
+            </div>
+            <div class="endpoint-item">
+                <span class="method">GET</span><span class="path">/api/market-prices</span>
+                <p class="description">Retrieve the latest synced energy price benchmarks (EIA/Opinet).</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Global Energy Hub & Logistics Safety-Index | Powered by Vercel Edge Functions</p>
+    </footer>
+</body>
+</html>
