@@ -31,6 +31,6 @@ jobs:
         run: |
           git config --global user.name 'EnergyBot'
           git config --global user.email 'bot@energyhub.api'
-          git add data/prices.json
+          git add api/data/prices.json
           git commit -m "chore: nightly energy data sync [skip ci]" || echo "No changes to commit"
           git push

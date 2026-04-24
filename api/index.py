@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from . import logic
@@ -70,4 +71,11 @@ async def get_market_prices():
 async def health_check():
     return {"status": "operational", "engine": "Deterministic Logic Layer v1"}
 
-# Static files are now served from the /public directory by Vercel directly
+@app.get("/", include_in_schema=False)
+async def read_root():
+    """
+    Serves the landing page.
+    """
+    return FileResponse("index.html")
+
+# Static files are handled by Vercel rewrites or served from the root
